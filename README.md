@@ -244,6 +244,9 @@ git clone https://github.com/filipelimavaz/projeto-ayty-briefing.git
 
 5. Feito esses passos. Sua aplicação estará pronta para ser executada.
 
+6. Caso queira mudar a forma como essa aplicação acessa o banco de dados. As alterações podem ser feitas no arquivo conexao.js
+
+![Execução MYSQL](.github/git-exec/conexao.png)
 
 <blockquote style="background-color:#f0f7f9; border-left:5px solid #2caeba; padding:10px;">
 <p><strong>Observações:</strong></p>
