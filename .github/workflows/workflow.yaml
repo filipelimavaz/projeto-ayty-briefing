@@ -1,0 +1,41 @@
+name: Continuous Integration
+
+on: pull_request
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js for API
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.11.1
+
+      - name: Set executable permissions for API tests
+        run: chmod +x api/src/app/tests/BriefingController.spec.js
+
+      - name: Install dependencies for API
+        run: |
+          cd api
+          npm install
+
+      - name: Setup Node.js for frontend
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.11.1
+
+      - name: Set executable permissions for frontend tests
+        run: |
+          chmod +x frontend/src/tests/Form.spec.js
+          chmod +x frontend/src/tests/Grid.spec.js
+
+      - name: Install dependencies for frontend
+        run: |
+          cd frontend
+          npm install
+          npm run test
+
