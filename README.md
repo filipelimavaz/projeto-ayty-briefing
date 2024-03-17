@@ -1,4 +1,4 @@
-![image](https://github.com/filipelimavaz/projeto-ayty-briefing/assets/42976390/db88eb3e-aa43-43e5-be89-0d2efac9515c)# Tutorial de Instalação
+# Tutorial de Instalação
 
 Este é um tutorial passo a passo para instalar os requisitos necessários para esta API.
 
@@ -151,6 +151,89 @@ MySQL é um sistema de gerenciamento de banco de dados relacional amplamente uti
 
 ![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-8.png)
 
-## Passo 3: Inicializando o MySQL Workbench
+## Passo 4: Inicializando o MySQL Workbench
 
-1. Após a instalação do MySQL Workbench. Você irá se deparar com a seguinte tela. Clique 
+1. Após a instalação do MySQL Workbench. Você irá se deparar com a seguinte tela. Clique na conexao root e entre com sua senha root. Caso seu workbench não esteja dessa forma, basta criar uma nova conexão no passo 2. Caso não, podemos pular para o passo 3.
+
+![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-1.png)
+
+2. Caso você não tenha uma conexão, ou esteja com problemas de se conectar. Crie uma nova conexão clicando no botão de **+** ao lado de **MySQL Connections**. Você verá essa tela a seguir. Escolha um nome para a conexão e sertifique-se que o **username** está como **root**, assim como a senha para acessar a conexão, pois o código utiliza-rá isso para se conectar com o banco.
+
+![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-2.png)
+
+3. Ao se conectar. Você será levado para essa tela.
+
+![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-3.png)
+
+## Passo 5: Povoando o Banco de Dados
+
+1. Para essa API funcionar corretamente ela precisa de um banco de dados local com regras de negócio específicas. Sendo assim, inicie uma nova query clicando no botão superior SQL (Logo abaixo do botão "File", clique no botão com um papel escrito SQL) e cole os seguintes comandos:
+
+![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-4.png)
+
+```bash
+CREATE DATABASE IF NOT EXISTS bd_briefing;
+
+USE bd_briefing;
+
+CREATE TABLE briefings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_do_cliente VARCHAR(255),
+    descricao_da_necessidade_do_cliente TEXT,
+    data DATE,
+    estado_do_briefing ENUM('Negociação', 'Finalizado', 'Aprovado')
+);
+
+INSERT INTO briefings (nome_do_cliente, descricao_da_necessidade_do_cliente, data, estado_do_briefing)
+VALUES
+    ('Cliente A', 'Descrição da necessidade do Cliente A', '2024-03-13', 'Negociação'),
+    ('Cliente B', 'Descrição da necessidade do Cliente B', '2024-03-14', 'Finalizado'),
+    ('Cliente C', 'Descrição da necessidade do Cliente C', '2024-03-15', 'Aprovado'),
+    ('Cliente D', 'Descrição da necessidade do Cliente D', '2024-03-16', 'Negociação'),
+    ('Cliente E', 'Descrição da necessidade do Cliente E', '2024-03-17', 'Finalizado');
+```
+
+2. Em seguida, clique no raio amarelo nas opções acima do editor. Após isso, nosso banco está pronto.
+
+## Passo 6: Rodando a aplicação
+
+1. Para rodar a aplicação é simples. Digite no seu terminal o seguinte comando:
+
+```bash
+git clone https://github.com/filipelimavaz/projeto-ayty-briefing.git
+```
+
+2. Entre na pasta do projeto. Entre na pasta API. Abra o terminal dentro dessa pasta e digite o comando:
+   1. Para instalar as dependências da aplicação:
+      ```bash
+      npm install
+      ```
+   2. Para executar os testes:
+      ```bash
+      npm test
+      ```
+   3. Para iniciar a aplicação:
+      ```bash
+      npm run dev
+      ```
+      
+   **APÓS ESSES PASSOS DEIXE O TERMINAL ABERTO**
+      
+3. A API está executando, mas apenas o backend. Sendo assim, vamos inicializar o frontend.
+4. Entre na pasta frontend do projeto, abra outro terminal e execute os seguintes passos:
+   1. Para instalar as dependências da aplicação:
+      ```bash
+      npm install
+      ```
+   2. Para executar os testes:
+      ```bash
+      npm run test:watch
+      ```
+   3. Para iniciar a aplicação:
+      ```bash
+      npm start
+      ```
+      
+   **APÓS ESSES PASSOS DEIXE O TERMINAL ABERTO**
+
+5. Feito esses passos. Sua aplicação estará pronta para ser executada.
