@@ -243,3 +243,13 @@ git clone https://github.com/filipelimavaz/projeto-ayty-briefing.git
    **APÓS ESSES PASSOS DEIXE O TERMINAL ABERTO**
 
 5. Feito esses passos. Sua aplicação estará pronta para ser executada.
+
+
+<blockquote style="background-color:#f0f7f9; border-left:5px solid #2caeba; padding:10px;">
+<p><strong>Observações:</strong></p>
+<ul>
+<li>O GitHub Actions foi implementado apenas para os testes no frontend devido a uma limitação do Jest que bloqueava as permissões no servidor do Git.</li>
+<li>A aplicação é responsiva até certo ponto, adaptando-se a notebooks, netbooks e tablets. No entanto, para uma experiência totalmente responsiva em dispositivos móveis, seria necessário desenvolver um layout específico, o que demandaria mais tempo.</li>
+</ul>
+</blockquote>
+
