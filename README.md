@@ -1,4 +1,4 @@
-# Tutorial de Instalação
+![image](https://github.com/filipelimavaz/projeto-ayty-briefing/assets/42976390/db88eb3e-aa43-43e5-be89-0d2efac9515c)# Tutorial de Instalação
 
 Este é um tutorial passo a passo para instalar os requisitos necessários para esta API.
 
@@ -100,45 +100,57 @@ MySQL é um sistema de gerenciamento de banco de dados relacional amplamente uti
 ### Windows
 
 1. Baixe o [instalador do MySQL para Windows](https://dev.mysql.com/downloads/windows/installer/8.0.html).
-   
-3. Execute o arquivo baixado e siga as instruções do instalador.
-4. Durante a instalação, você será solicitado a selecionar os componentes que deseja instalar. Certifique-se de selecionar "MySQL Server" e quaisquer outras ferramentas ou plugins que você deseje instalar.
-5. Durante a configuração, você precisará definir uma senha para o usuário root do MySQL. Certifique-se de escolher uma senha forte e anote-a em um local seguro.
-6. Conclua a instalação seguindo todas as instruções do instalador.
-7. Após a instalação, você pode verificar se o MySQL Server foi instalado corretamente abrindo o prompt de comando e digitando o seguinte comando:
+2. Selecione a primeira opção pois não vamos utilizar todos os recursos do MYSQL. 
 
- ```bash
- mysql --version
-```
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-0.png)
 
-### macOS
+3. Após selecionar a opção de download. Você será levado para uma tela onde será perguntado se você quer fazer login antes continuar, mas não há necessidade. Clique em "No thanks, just start my download."
 
-1. Baixe o [instalador do MySQL para macOS](https://dev.mysql.com/downloads/mysql/) do site oficial.
-2. Execute o arquivo baixado e siga as instruções do instalador.
-3. Durante a instalação, você será solicitado a selecionar os componentes que deseja instalar. Certifique-se de selecionar "MySQL Server" e quaisquer outras ferramentas ou plugins que você deseje instalar.
-4. Durante a configuração, você precisará definir uma senha para o usuário root do MySQL. Certifique-se de escolher uma senha forte e anote-a em um local seguro.
-5. Conclua a instalação seguindo todas as instruções do instalador.
-6. Após a instalação, você pode verificar se o MySQL Server foi instalado corretamente abrindo o Terminal e digitando o seguinte comando:
+4. Após o download. Clique no arquivo de instalação e você será levado a essa tela. Clique em custom
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-1.png)
+
+6. Após clicar em "custom". Você será levado para essa tela. Nela iremos selecionar apenas as ferramentas que utilizaremos para executar o projeto. Sendo assim, Siga o passo a passo:
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-2.png)
 
 ```bash
-mysql --version
-```
-
-### Linux (Debian/Ubuntu)
-
-1. Abra o Terminal e execute os seguintes comandos para baixar e instalar o MySQL:
-
-```bash
-sudo apt-get update
+   1. Clicar em MySQL Server.
+   2. MySQL Server 8.0.
+   3. Selecione a primeira opção.
+   4. Clicar na seta verde
 ```
 ```bash
-sudo apt-get install mysql-server
+   1. Clicar em Applications.
+   2. Mysql Workbench.
+   3. Mysql Workbench 8.0.
+   4. Selecione a primeira opcao.
+   5. Clicar na seta verde
 ```
+7. Feito o passo a passo. Sua tela ficará assim. Basta clicar em next.
 
-1. Durante a instalação, você será solicitado a definir uma senha para o usuário root do MySQL. Certifique-se de escolher uma senha forte e anote-a em um local seguro.
-2. Conclua a instalação seguindo todas as instruções do instalador.
-3. Após a instalação, você pode verificar se o MySQL Server foi instalado corretamente digitando o seguinte comando no Terminal:
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-3.png)
 
-```bash
-mysql --version
-```
+8. Após esse passo é só clicar em next até chegar na imagem do passo 9.
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-4.png)
+
+9. Nesta parte não precisamos fazer nada. Apenas verificar se a porta alocada para o banco é a 3306. Pode clicar em next.
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-5.png)
+
+10. Essa parte é de extrema importância. Clique na segunda opção "Use Legacy Authentication" para não termos problemas de autenticação mais a frente.
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-6.png)
+
+11. Aqui iremos selecionar uma senha para acessar o banco. Digite a senha **root** pois será a que irá ser utilizada pelo código para acessar o banco.
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-7.png)
+
+12. Nesta parte, se você não quiser que o Mysql inicie toda vez que você ligar o computador, desmarque a opção "Start the MySQL at System Startup". Após isso, basta clicar em next até finalizar a instalação.
+
+![Instalação MYSQL](.github/mysql-install/InstalacaoMYSQL-8.png)
+
+## Passo 3: Inicializando o MySQL Workbench
+
+1. Após a instalação do MySQL Workbench. Você irá se deparar com a seguinte tela. Clique 
