@@ -2,7 +2,11 @@
 
 Este é um tutorial passo a passo para instalar os requisitos necessários para esta API.
 
-[Clique aqui](#topico5)
+<font color="red">
+
+> **Observação:** Se você já possui o Git, o Node.js e o MySQL Workbench instalados em seu sistema, sinta-se à vontade para pular para o Passo 5.
+
+</font>
 
 ## Passo 1: Instalar o GIT
 
@@ -167,7 +171,7 @@ MySQL é um sistema de gerenciamento de banco de dados relacional amplamente uti
 
 ![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-3.png)
 
-[## Passo 5: Povoando o Banco de Dados](#topico5)
+## Passo 5: Povoando o Banco de Dados
 
 1. Para essa API funcionar corretamente ela precisa de um banco de dados local com regras de negócio específicas. Sendo assim, inicie uma nova query clicando no botão superior SQL (Logo abaixo do botão "File", clique no botão com um papel escrito SQL) e cole os seguintes comandos:
 
