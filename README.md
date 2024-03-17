@@ -2,6 +2,8 @@
 
 Este é um tutorial passo a passo para instalar os requisitos necessários para esta API.
 
+[Clique aqui](#topico5)
+
 ## Passo 1: Instalar o GIT
 
 GIT é um sistema de controle de versão amplamente utilizado para o gerenciamento de código-fonte.
@@ -165,7 +167,7 @@ MySQL é um sistema de gerenciamento de banco de dados relacional amplamente uti
 
 ![Execução MYSQL](.github/mysql-exec/ExecucaoMYSQL-3.png)
 
-## Passo 5: Povoando o Banco de Dados
+[## Passo 5: Povoando o Banco de Dados](#topico5)
 
 1. Para essa API funcionar corretamente ela precisa de um banco de dados local com regras de negócio específicas. Sendo assim, inicie uma nova query clicando no botão superior SQL (Logo abaixo do botão "File", clique no botão com um papel escrito SQL) e cole os seguintes comandos:
 
